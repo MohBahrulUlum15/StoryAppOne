@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">StoryAppOne</string>
+    <string name="user_photo">Photo User</string>
+    <string name="user_name">User Name</string>
+    <string name="desc">Desc</string>
+    <string name="copyright">RememberDev | 2023</string>
+    <string name="logout">Logout</string>
+    <string name="upload">Upload</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="title_login_page">Please Login to Continue</string>
+    <string name="login_title">Please Login to Continue</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="title_register">Please fill in the fields</string>
+    <string name="name">Name</string>
+    <string name="content_description_avatar">default_avatar</string>
+    <string name="content_description_image_story">default image story</string>
+    <string name="const_person_name">Ulum</string>
+    <string name="camera_x">Camera</string>
+    <string name="gallery">Galerry</string>
+</resources>
