@@ -69,25 +69,28 @@ class RegisterActivity : AppCompatActivity() {
                 }
                 else -> {
                     registerViewModel.userRegister(name, email, password)
-                    if (registerViewModel.getSuccessRegister()) {
-                        AlertDialog.Builder(this).apply {
-                            setTitle("Yeah!")
-                            setMessage("account created successfully")
-                            setPositiveButton("Lanjut") { _, _ ->
-                                finish()
+                    registerViewModel.successRegister.observe(this) {
+                        if (it) {
+                            AlertDialog.Builder(this).apply {
+                                setTitle("Yeah!")
+                                setMessage("account created successfully")
+                                setPositiveButton("Continue") { _, _ ->
+                                    finish()
+                                }
+                                create()
+                                show()
                             }
-                            create()
-                            show()
-                        }
-                    } else {
-                        AlertDialog.Builder(this).apply {
-                            setTitle("Oops!")
-                            setMessage("Failed to create account")
-                            setPositiveButton("Try again") { _, _ ->
+                        } else {
+                            AlertDialog.Builder(this).apply {
+                                setTitle("Oops!")
+                                setMessage("Failed to create account")
+                                setPositiveButton("Try again") { _, _ ->
+                                }
+                                create()
+                                show()
                             }
-                            create()
-                            show()
                         }
+
                     }
                 }
             }

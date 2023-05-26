@@ -33,7 +33,7 @@ class CustomEditText: AppCompatEditText {
 
         addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
-                if(s.toString().isEmpty() || s.toString().length < 8){
+                if(s.toString().isEmpty()){
                     showIconWarning()
                 }else{
                     hideIconWarning()
